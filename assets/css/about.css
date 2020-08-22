@@ -1,0 +1,84 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Roboto', sans-serif;
+  overflow-x: hidden;
+  color: #323232;
+}
+
+.header-about {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  background-size: cover;
+  background-position: center;
+  background-image: url(/assets/image/p1.jpg);
+}
+
+.header-about-layer {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#142d57), to(#08459E));
+  background-image: linear-gradient(to right bottom, #142d57, #08459E);
+  background-color: #08459E;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.header-about-contain {
+  position: relative;
+  padding-top: 140px;
+}
+
+.header-about-contain .page-name {
+  text-align: center;
+  color: white;
+}
+
+.header-about-contain .btn-getintouch {
+  width: 150px;
+  display: block;
+  margin: 0 auto;
+}
+
+.navbar-logo-filter {
+  -webkit-filter: brightness(0) invert(1) !important;
+          filter: brightness(0) invert(1) !important;
+}
+
+.navbar-logo-filter.scrolled {
+  -webkit-filter: inherit !important;
+          filter: inherit !important;
+}
+
+.ourTeam {
+  background-color: #f3f3f3;
+}
+
+.ourTeam__profile {
+  height: 300px;
+  background-color: #fff;
+  border-radius: 25px;
+  -webkit-box-shadow: 4px 8px 5px #32323246;
+          box-shadow: 4px 8px 5px #32323246;
+}
+
+.ourTeam__profile-pic {
+  height: 140px;
+  width: 140px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: none;
+  -webkit-box-shadow: 4px 4px 5px #323232a4;
+          box-shadow: 4px 4px 5px #323232a4;
+}
+
+.ourTeam__profile img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+/*# sourceMappingURL=about.css.map */

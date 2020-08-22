@@ -1,0 +1,113 @@
+.newsDetail{
+    
+    &-headline{
+        color: #323232;
+            
+        & h1{
+            font-size: 35px;
+        }
+        
+    }
+    &-image{
+        width:100%;
+        height: 400px;
+        
+    }
+
+    & a{
+        color: $text-color;
+        &:hover{
+            color: #aaaaaa;
+        }
+    }
+
+    & img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &-date{
+        color: #aaaaaa;
+        font-size: 14px;
+    }
+
+    &-information{
+        font-size: 16px;
+        color: #323232;
+    }
+
+    &__otherNews{
+        &-image{
+            width: 100%;
+            height: 160px;
+            overflow: hidden;
+        }
+    }
+}
+
+.newsImage{
+    background-color: $background-color;
+    &-image{
+        width: 100%;
+        height: 190px;
+        overflow: hidden;
+    }
+
+    & img{
+        width:100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+.image-slider {
+    & .slick-slider-next-btn.slick-arrow,
+    & .slick-slider-prev-btn.slick-arrow {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        font-size: 30px;
+        top: 50%;
+        z-index: 99;
+        cursor: pointer;
+    }
+    & .slick-slider-next-btn.slick-arrow {
+        right: -10px;
+    }
+    & .slick-slider-prev-btn.slick-arrow {
+        left: 0px;
+    }
+}
+@media(max-width:575px){
+    .newsDetail__otherNews-image {
+        width: 80%;
+        height: 200;
+        height: 200px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        overflow: hidden;
+        display: block;
+        margin: 0 auto;
+    }
+    .newsDetail__otherNews-headline{
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    .newsDetail-date {
+        color: #aaaaaa;
+        font-size: 14px;
+        padding-left: 45px;
+       
+    }
+}
+@media(min-width:575px)and(max-width:767px){
+    .newsDetail__otherNews-image{
+        width: 100%;
+        height: 300px;
+    }
+}
+@media(min-width:767px)and(max-width:991px){
+    .newsDetail__otherNews-image{
+        width: 100%;
+        height: 350px;
+    }
+}

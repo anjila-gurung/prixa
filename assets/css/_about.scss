@@ -1,0 +1,68 @@
+@import'variables';
+@import'mixin';
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+    color: $text-color;
+}
+
+.header-about {
+    @include header();
+    background-image: url(../../assets/image/p1.jpg);
+}
+
+.aboutPrixa {
+    &-icon {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+.ourTeam {
+    background-color: $background-color;
+    &__profile {
+        height: 300px;
+        background-color: $white-color;
+        border-radius: $border-radius;
+        box-shadow: $box-shadow;
+        padding: $card-padding;
+        &-pic {
+            height: 140px;
+            width: 140px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: none;
+            box-shadow: 3px 3px 5px #323232a4;
+            display: block;
+            margin: 0 auto;
+        }
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+@media(min-width:767px) and (max-width:991px) {
+    .aboutPrixa {
+        &-icon {
+            width: 40px;
+            height: 40px;
+        }
+    }
+}
+@media(max-width:767px){
+    .aboutPrixa-icon{
+        display: block;
+        margin: 0 auto;
+        width: 60px;
+        height: 60px;
+    }
+    .aboutPrixa__service{
+        text-align: center;
+    }
+   
+}

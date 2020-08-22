@@ -1,0 +1,156 @@
+@import'variables';
+@import'mixin';
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+    color: $text-color;
+}
+
+.header-video {
+    @include header();
+    background-image: url(../../assets/image/2.jpg);
+}
+
+.videos {
+    background-color: $background-color;
+}
+
+.pt-15 {
+    padding-top: 15px;
+}
+
+
+/*slick*/
+
+.videos .slick-slider {
+    margin: 0 -15px;
+}
+
+.videos .slick-slide {
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+.slider-nav {
+    & .slick-slider-next-btn.slick-arrow,
+    & .slick-slider-prev-btn.slick-arrow {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        font-size: 30px;
+        top: 50%;
+        z-index: 99;
+        cursor: pointer;
+    }
+    & .slick-slider-next-btn.slick-arrow {
+        right: -10px;
+    }
+    & .slick-slider-prev-btn.slick-arrow {
+        left: 0px;
+    }
+}
+
+.slider-image {
+    height: 220px;
+    width: 100%;
+}
+
+.video-show .video {
+    background-color: white;
+}
+
+.p-30 {
+    padding: 30px;
+}
+
+.video-info {
+    background-color: white;
+    color: $text-color;
+    &-name {
+        font-weight: bold;
+        text-align: center;
+    }
+    &-description {
+        padding: 30px;
+    }
+}
+
+//play-icon
+.slider-video-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background: rgb(0 0 0 / 0.6);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin: auto;
+    text-align: center;
+    line-height: 58px;
+}
+
+.slider-image {
+    cursor: pointer;
+}
+
+.slider-video-icon svg {
+    color: #fff;
+    font-size: 25px;
+}
+
+@media (max-width: 1199px) {
+    .slider-image {
+        height: 180px;
+        width: 100%;
+    }
+}
+
+@media(max-width:991px) {
+    .video-info {
+        margin-top: 20px;
+        height: 300px;
+    }
+}
+
+@media(min-width:768px) and (max-width:991px) {
+    .slider-image {
+        height: 180px;
+        width: 100%;
+    }
+}
+
+@media(min-width:576px) and (max-width:767px) {
+    .video-info {
+        height: 300px;
+    }
+    .slider-image {
+        height: 150px;
+        width: 100%;
+    }
+}
+
+@media(max-width:575px) {
+    .video-info {
+        height: 380px;
+    }
+    .slider-image {
+        height: inherit;
+        width: 100%;
+    }
+}
+
+@media(max-width:375px) {
+    .embed-responsive {
+        height: 200px;
+    }
+    .video-info-name {
+        font-size: 20px;
+    }
+    .slider-image {
+        height: 120px;
+        width: 100%;
+    }
+}

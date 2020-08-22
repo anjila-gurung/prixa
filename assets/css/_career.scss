@@ -1,0 +1,145 @@
+@import'variables';
+@import'mixin';
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+    color: $text-color;
+}
+
+.header-career {
+    @include header();
+    background-image: url(../../assets/image/career.jpg);
+}
+
+//btn foucs removed use only btn-primary boostrap btn then implement same css on every btn
+.btn-primary:focus,
+.btn-primary.focus {
+    color: #fff;
+    background-color: transparent;
+    border-color: transparent;
+    box-shadow: none;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active:focus,
+.btn-primary:not(:disabled):not(.disabled).active:focus,
+.show>.btn-primary.dropdown-toggle:focus {
+    box-shadow: none;
+}
+
+.btn-color {
+    background-color: $primary-color;
+    color: white;
+    border-color: $primary-color;
+    padding: 10px 20px;
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: white;
+        color: $primary-color;
+        border-color: $primary-color;
+    }
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled).active,
+    .show>&.dropdown-toggle {
+        background-color: white;
+        color: $primary-color;
+        border-color: $primary-color;
+    }
+}
+
+.change-color {
+    color: $primary-color;
+}
+
+//  .career-info{
+//      padding: $section-padding;
+//  }
+//  .career.bg{
+//      background-color: pink;
+//  }
+.firstpart {
+    color: $text-color;
+    font-size: 18px;
+    text-align: center;
+}
+
+.career {
+    // padding-bottom: 20px;
+    line-height: 1.5;
+    &-open-position {
+        display: block;
+        margin: 0 auto;
+        width: 250px;
+    }
+    &-bg {
+        width: 500px;
+        height: 400px;
+        // float: right;
+    }
+    .firstpart {
+        color: $text-color;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: 20px;
+        text-align: center;
+    }
+    .secondpart {
+        text-align: center;
+        line-height: 2;
+    }
+}
+
+.career-cv {
+    padding: $section-padding;
+    &-info {
+        text-align: center;
+        color: $text-color;
+    }
+    &-btn {
+        .btn {
+            display: block;
+            margin: 0 auto;
+        }
+    }
+}
+
+@media (max-width:575px) {
+    .career-cv {
+        padding: 30px;
+    }
+    .career {
+        &-bg {
+            width: 450px;
+            height: 300px;
+        }
+    }
+}
+
+@media (min-width:991px) and (max-width:1199px) {
+    .career {
+        &-bg {
+            width: 400px;
+            height: 350px;
+        }
+    }
+}
+
+@media (min-width:575px) and (max-width:767px) {
+    .career {
+        &-bg {
+            width: 600px;
+            height: 400px;
+        }
+    }
+}
+
+@media (min-width:767px) and (max-width:991px) {
+    .career {
+        &-bg {
+            width: 300px;
+            height: 350px;
+        }
+    }
+}

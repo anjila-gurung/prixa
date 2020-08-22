@@ -1,0 +1,298 @@
+@import'variables';
+@import'mixin';
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+    color: $text-color;
+}
+
+.header-service-contain .page-name {
+    margin-bottom: 30px;
+}
+
+.header-service {
+    @include header();
+    background-image: url(../../assets/image/service1.jpg);
+}
+
+.service-info {
+    background-image: url(../../assets/image/path8.png);
+    color: $text-color;
+    background-repeat: no-repeat;
+    width: 100%;
+    &-gap {
+        padding: 20px;
+    }
+    .icon-size {
+        width: 80px;
+        height: 80px;
+    }
+    .service-bg {
+        width: 350px;
+        height: 350px;
+    }
+}
+
+.service-new {
+    background-color: $primary-color;
+    position: relative;
+    color: white;
+    padding: $section-padding;
+    &-image {
+        width: 100%;
+        height: 100%;
+        border: none;
+        background-image: url(../../assets/image/3.jpg);
+        background-size: cover;
+        border-radius: $border-radius;
+        // box-shadow: $box-shadow;
+        position: absolute;
+        top: -95px;
+    }
+    .icon-size {
+        width: 45px;
+        height: 45px;
+    }
+}
+
+.service-type {
+    background-color: $background-color;
+    padding: $section-padding;
+    &-box {
+        height: $card-height;
+        background-color: white;
+        border: none;
+        padding: $card-padding;
+        border-radius: $border-radius;
+        box-shadow: $box-shadow;
+        // margin: $card-margin;
+        &-image {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            overflow: hidden;
+            display: block;
+            margin: 0 auto;
+            &-value {
+                object-fit: cover;
+            }
+            &-value {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .service-title {
+            @include sub-title();
+        }
+        .service-content {
+            text-align: center;
+        }
+    }
+}
+
+.main-project {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    background-color: white;
+    border: none;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+    width: $box-width;
+    padding-bottom: 20px;
+    .background-project {
+        @include image-bg();
+    }
+    .layer-project {
+        @include image-layer();
+        border-radius: $border-radius;
+    }
+}
+
+// Responsive media
+@media screen and (max-width: 991px) {
+    .wrapper.clearfix.flex-Spaces {
+        display: block;
+        text-align: center;
+        margin-bottom: 0px;
+    }
+    .default-footer .bottom-footer p,
+    .default-footer .bottom-footer ul {
+        justify-content: center;
+    }
+    #nav-text {
+        color: #000;
+    }
+    .navbar-default {
+        background: #fff;
+    }
+    .navbar-dark .navbar-toggler-icon {
+        filter: brightness(0);
+    }
+    .btn-login {
+        color: #08459e;
+        border: solid 1px #08459e;
+        &:active,
+        &:focus,
+        &:active {
+            color: #08459e;
+            border: solid 1px #08459e;
+        }
+    }
+    #nav-size {
+        padding: 10px 0px;
+    }
+    .header-service-contain .page-name {
+        margin-bottom: 30px;
+    }
+    .btn-getintouch img {
+        margin-left: 10px;
+    }
+    .login {
+        margin: 18px 0px;
+        .btn-login {
+            background-color: $primary-color;
+            color: white;
+        }
+    }
+    .header-service-contain {
+        padding-top: 160px;
+    }
+    .service-type-box {
+        height: 300px;
+        margin: 0px;
+    }
+    .service-info {
+        .service-bg {
+            width: 350px;
+            height: 300px;
+        }
+        .icon-size {
+            width: 50px;
+            height: 50px;
+        }
+    }
+}
+
+@media (min-width: 767px) and (max-width: 991px) {
+    .wrapper.clearfix.flex-Spaces {
+        display: block;
+        text-align: center;
+        margin-bottom: 0px;
+    }
+    .default-footer .bottom-footer p,
+    .default-footer .bottom-footer ul {
+        justify-content: center;
+    }
+    #nav-text {
+        color: #000;
+    }
+    .navbar-default {
+        background: #fff;
+    }
+    .navbar-dark .navbar-toggler-icon {
+        filter: brightness(0);
+    }
+    .btn-login {
+        color: #08459e;
+        border: solid 1px #08459e;
+        &:active,
+        &:focus,
+        &:active {
+            color: #08459e;
+            border: solid 1px #08459e;
+        }
+    }
+    #nav-size {
+        padding: 10px 0px;
+    }
+    .navbar-default {
+        .login {
+            margin: 18px 0px;
+            .btn-login {
+                color: #fff;
+                border: solid 1px #08459e;
+                &:active,
+                &:focus,
+                &:active {
+                    color: #08459e;
+                    border: solid 1px #08459e;
+                }
+            }
+        }
+    }
+    .service-info {
+        .service-bg {
+            width: 350px;
+            height: 400px;
+        }
+        .icon-size {
+            width: 50px;
+            height: 50px;
+        }
+    }
+    .service-new .icon-size {
+        width: 34px;
+        height: 45px;
+    }
+    .service-type-box {
+        height: 450px;
+        margin: 0px;
+    }
+}
+
+@media (max-width: 575px) {
+    .service-info-gap {
+        padding: 30px;
+    }
+    .service-type-box {
+        height: 350px;
+    }
+    .service-info {
+        .icon-size {
+            height: 80px;
+            width: 80px;
+        }
+    }
+}
+
+@media (min-width:991px) and (max-width:1199px) {
+    .service-info {
+        .service-bg {
+            width: 400px;
+            height: 400px;
+        }
+        .icon-size {
+            width: 60px;
+            height: 60px;
+        }
+    }
+}
+
+@media( min-width:1199px) and (max-width: 1200px) {
+    .service-info .icon-size {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+// @media screen and (max-width:1077px){
+//     .service-info .icon-size {
+//         width: 70px;
+//         height: 70px;
+//     }
+// }
+// @media (max-width:767px){
+//     .service-info{
+//         .service-bg{
+//             width: 350px;
+//             height: 400px;
+//         }
+//         .icon-size{
+//             width: 50px;
+//             height: 50px;
+//         }
+//     }
+// }
